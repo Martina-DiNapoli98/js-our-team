@@ -5,37 +5,37 @@ let cardsEl = document.querySelector(".cards .row")
 
 const teamMembers = [
   {
-    name: "Marco Bianchi",
+    name: "MARCO BIANCHI",
     role: "Designer",
     email: "marcobianchi@team.com",
     img: "assets/img/male1.png"
   },
   {
-    name: "Laura Rossi",
+    name: "LAURA ROSSI",
     role: "Front-end Developer",
     email: "laurarossi@team.com",
     img: "assets/img/female1.png"
   },
   {
-    name: "Giorgio Verdi",
+    name: "GIORGIO VERDI",
     role: "Back-end Developer",
     email: "giorgioverdi@team.com",
     img: "assets/img/male2.png"
   },
   {
-    name: "Marta Ipsum",
+    name: "MARTA IPSUM",
     role: "SEO Specialist",
     email: "martarossi@team.com",
     img: "assets/img/female2.png"
   },
   {
-    name: "Roberto Lorem",
+    name: "ROBERTO LOREM",
     role: "SEO Specialist",
     email: "robertolorem@team.com",
     img: "assets/img/male3.png"
   },
   {
-    name: "Daniela Amet",
+    name: "DANIELA AMET",
     role: "Analyst",
     email: "danielaamet@team.com",
     img: "assets/img/female3.png"
@@ -48,20 +48,21 @@ function generateMarkup(ourMembers){
   let { img, name, role , email} = ourMembers
   console.log(ourMembers);
   const markup = `
-   
-        
-            <div class="col-4 bg-black d-flex">
-                <img src="${img}" alt="" name="img" width="150">
-                <div class="description p-4">
-                    <h2 class="text-white">
-                        ${name}
-                    </h2>
-                    <div class="text-white">
-                        ${role}
+             <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="bg-black d-flex flex-row">
+                    <img src="${img}" alt="" name="img" class="card-img-top">
+                    <div class="description p-4">
+                        <strong class="text-white">
+                            ${name}
+                        </strong>
+                        <div class="text-white">
+                            ${role}
+                        </div>
+                        <div class="text-primary">
+                            ${email}
+                        </div>
                     </div>
-                    <div class="text-primary">
-                        ${email}
-                    </div>
+               
                 </div>
             </div>`
     console.log(markup);
