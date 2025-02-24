@@ -79,3 +79,32 @@ function generateMarkup(ourMembers){
       cardsEl.innerHTML += markup
     }
   
+
+    const myForm = document.querySelector('form');
+
+    myForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+    
+      const name = document.querySelector('input[name="name"]').value;
+      const role = document.querySelector('input[name="role"]').value;
+      const img = document.querySelector('input[name="img"]').value;
+      const email = document.querySelector('input[name="email"]').value;
+    
+      const member = {
+        name: name,
+        role: role, 
+        img: img,
+        email: email
+      };
+    
+      const markup = generateMarkup(member);
+      cardsEl.innerHTML += markup;
+    
+      
+      document.querySelector('input[name="name"]').value = "";
+      document.querySelector('input[name="role"]').value = "";
+      document.querySelector('input[name="img"]').value = "";
+      document.querySelector('input[name="email"]').value = "";
+
+    });
+  
